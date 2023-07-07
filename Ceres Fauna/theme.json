@@ -1,0 +1,56 @@
+{
+    "name": "Ceres Fauna",
+    "version": "v1.0",
+    "author": "charlie-gray",
+    "target": "System-Wide",
+    "manifest_version": 4,
+    "inject": {
+        "shared.css": [
+            "SP"
+        ],
+        "sideMenus.css": [
+            "QuickAccess", "MainMenu"
+        ] 
+    },
+    "dependencies": {
+        "Minimal Lock Screen": {
+            "Pin Pad Style": "Standard",
+            "Background Type" : "Transparent",
+            "Input Area Background Color" : "_",
+            "Input Area Background Color Picker" : "#684534ed",
+            "Left-Handed Mode" : "Yes"
+        },
+        "Clean Gameview": {
+            "Show Steam Cloud" : "Yes"
+        },
+        "Switch Like Home": {
+            "No Friends" : "Yes"
+        }
+    },
+    "patches": {
+        "Keyboard Theme": {
+            "default": "None",
+            "type": "dropdown",
+            "values":{
+                "None": {},
+                "Popsicle": {
+                    "keyboards/popsicle.css": [ "SP" ]
+                },
+                "Minimal": {
+                    "keyboards/minimal.css": [ "SP" ]
+                }
+            }
+        },
+        "Colored Toggles": {
+            "default": "Sharky Ocean",
+            "type": "dropdown",
+            "values":{
+                "None": {},
+                "Sharky Ocean": {
+                    "toggleColors/shared.css": [ "QuickAccess", "SP", "MainMenu" ],
+                    "toggleColors/ocean.css": [ "QuickAccess", "SP", "MainMenu" ]
+                }
+            }
+        }
+    }
+}
